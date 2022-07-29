@@ -1,0 +1,373 @@
+[
+  {
+    "id": "1",
+    "english": "dog",
+    "transcription": "[dɔg]",
+    "russian": "собака",
+    "collection": "Домашние животные"
+  },
+  {
+    "id": "2",
+    "english": "cat",
+    "transcription": "[kæt]",
+    "russian": "кошка",
+    "collection": "Домашние животные"
+  },
+  {
+    "id": "3",
+    "english": "cow",
+    "transcription": "[kau]",
+    "russian": "корова",
+    "collection": "Домашние животные"
+  },
+  {
+    "id": "4",
+    "english": "horse",
+    "transcription": "[hɔːs]",
+    "russian": "лошадь",
+    "collection": "Домашние животные"
+  },
+  {
+    "id": "5",
+    "english": "goat",
+    "transcription": "[gəut]",
+    "russian": "козёл",
+    "collection": "Домашние животные"
+  },
+  {
+    "id": "6",
+    "english": "pig",
+    "transcription": "[pɪg]",
+    "russian": "свинья",
+    "collection": "Домашние животные"
+  },
+  {
+    "id": "7",
+    "english": "sheep",
+    "transcription": "[ʃiːp]",
+    "russian": "овца",
+    "collection": "Домашние животные"
+  },
+  {
+    "id": "8",
+    "english": "cock",
+    "transcription": "[kɔk]",
+    "russian": "петух",
+    "collection": "Домашние животные"
+  },
+  {
+    "id": "9",
+    "english": "chicken",
+    "transcription": "['ʧɪkɪn]",
+    "russian": "курица",
+    "collection": "Домашние животные"
+  },
+  {
+    "id": "10",
+    "english": "duck",
+    "transcription": "[dʌk]",
+    "russian": "утка",
+    "collection": "Домашние животные"
+  },
+  {
+    "id": "11",
+    "english": "parrot",
+    "transcription": "['pærət]",
+    "russian": "попугай",
+    "collection": "Домашние животные"
+  },
+  {
+    "id": "12",
+    "english": "hamster",
+    "transcription": "['hæmstə]",
+    "russian": "хомяк",
+    "collection": "Домашние животные"
+  },
+  {
+    "id": "13",
+    "english": "roof",
+    "transcription": "[ruːf]",
+    "russian": "крыша",
+    "collection": "Дом"
+  },
+  {
+    "id": "14",
+    "english": "storey",
+    "transcription": "[ˈstɔːrɪ]",
+    "russian": "этаж",
+    "collection": "Дом"
+  },
+  {
+    "id": "15",
+    "english": "wall",
+    "transcription": "[wɔːl]",
+    "russian": "стена",
+    "collection": "Дом"
+  },
+  {
+    "id": "16",
+    "english": "window",
+    "transcription": "[ˈwɪndəʊ]",
+    "russian": "окно",
+    "collection": "Дом"
+  },
+  {
+    "id": "17",
+    "english": "balcony",
+    "transcription": "[ˈbælkənɪ]",
+    "russian": "балкон",
+    "collection": "Дом"
+  },
+  {
+    "id": "18",
+    "english": "door",
+    "transcription": "[dɔː]",
+    "russian": "дверь",
+    "collection": "Дом"
+  },
+  {
+    "id": "19",
+    "english": "porch",
+    "transcription": "[pɔːtʃ]",
+    "russian": "крыльцо",
+    "collection": "Дом"
+  },
+  {
+    "id": "20",
+    "english": "staircase",
+    "transcription": "[ˈstɛəˌkeɪs]",
+    "russian": "лестница",
+    "collection": "Дом"
+  },
+  {
+    "id": "21",
+    "english": "cellar",
+    "transcription": "[ˈsɛlə]",
+    "russian": "подвал",
+    "collection": "Дом"
+  },
+  {
+    "id": "22",
+    "english": "garret",
+    "transcription": "[ˈɡærɪt]",
+    "russian": "чердак",
+    "collection": "Дом"
+  },
+  {
+    "id": "23",
+    "english": "garage",
+    "transcription": "[ˈɡærɑːʒ]",
+    "russian": "гараж",
+    "collection": "Дом"
+  },
+  {
+    "id": "24",
+    "english": "meat",
+    "transcription": "[miːt]",
+    "russian": "мясо",
+    "collection": "Еда"
+  },
+  {
+    "id": "25",
+    "english": "fruit",
+    "transcription": "[fruːt]",
+    "russian": "фрукты",
+    "collection": "Еда"
+  },
+  {
+    "id": "26",
+    "english": "bread",
+    "transcription": "[bred]",
+    "russian": "хлеб",
+    "collection": "Еда"
+  },
+  {
+    "id": "27",
+    "english": "butter",
+    "transcription": "['bʌtə]",
+    "russian": "масло",
+    "collection": "Еда"
+  },
+  {
+    "id": "28",
+    "english": "vegetables",
+    "transcription": "['veʤ(ə)təblz]",
+    "russian": "овощи",
+    "collection": "Еда"
+  },
+  {
+    "id": "29",
+    "english": "salad",
+    "transcription": "['sæləd]",
+    "russian": "салат",
+    "collection": "Еда"
+  },
+  {
+    "id": "30",
+    "english": "salt",
+    "transcription": "[sɔːlt]",
+    "russian": "соль",
+    "collection": "Еда"
+  },
+  {
+    "id": "31",
+    "english": "pepper",
+    "transcription": "['pepə]",
+    "russian": "перец",
+    "collection": "Еда"
+  },
+  {
+    "id": "32",
+    "english": "mustard",
+    "transcription": "['mʌstəd]",
+    "russian": "горчица",
+    "collection": "Еда"
+  },
+  {
+    "id": "33",
+    "english": "coffee",
+    "transcription": "['kɔfɪ]",
+    "russian": "кофе",
+    "collection": "Еда"
+  },
+  {
+    "id": "34",
+    "english": "tea",
+    "transcription": "[tiː]",
+    "russian": "чай",
+    "collection": "Еда"
+  },
+  {
+    "id": "35",
+    "english": "weather forecast",
+    "transcription": "['weðəˌ'fɔːkɑːst]",
+    "russian": "прогноз погоды",
+    "collection": "Погода"
+  },
+  {
+    "id": "36",
+    "english": "temperature",
+    "transcription": "['temp(ə)rəʧə]",
+    "russian": "температура",
+    "collection": "Погода"
+  },
+  {
+    "id": "37",
+    "english": "weatherman",
+    "transcription": "['weðəmæn]",
+    "russian": "метеоролог",
+    "collection": "Погода"
+  },
+  {
+    "id": "38",
+    "english": "thunderstorm",
+    "transcription": "['θʌndəstɔːm]",
+    "russian": "гроза",
+    "collection": "Погода"
+  },
+  {
+    "id": "39",
+    "english": "thunder",
+    "transcription": "['θʌndə]",
+    "russian": "гром",
+    "collection": "Погода"
+  },
+  {
+    "id": "40",
+    "english": "lightning",
+    "transcription": "['laɪtnɪŋ]",
+    "russian": "молния",
+    "collection": "Погода"
+  },
+  {
+    "id": "41",
+    "english": "shower",
+    "transcription": "['ʃəuə]",
+    "russian": "ливень",
+    "collection": "Погода"
+  },
+  {
+    "id": "42",
+    "english": "fog",
+    "transcription": "[fɔg]",
+    "russian": "туман",
+    "collection": "Погода"
+  },
+  {
+    "id": "43",
+    "english": "heat",
+    "transcription": "[hiːt]",
+    "russian": "жара",
+    "collection": "Погода"
+  },
+  {
+    "id": "44",
+    "english": "wind",
+    "transcription": "[wɪnd]",
+    "russian": "ветер",
+    "collection": "Погода"
+  },
+  {
+    "id": "45",
+    "english": "frost",
+    "transcription": "[frɔst]",
+    "russian": "мороз",
+    "collection": "Погода"
+  },
+  {
+    "id": "46",
+    "english": "snow",
+    "transcription": "[snəu]",
+    "russian": "снег",
+    "collection": "Погода"
+  },
+  {
+    "id": "47",
+    "english": "shoes",
+    "transcription": "[ʃuːz]",
+    "russian": "обувь",
+    "collection": "Одежда"
+  },
+  {
+    "id": "48",
+    "english": "skirt",
+    "transcription": "[skɜːt]",
+    "russian": "юбка",
+    "collection": "Одежда"
+  },
+  {
+    "id": "49",
+    "english": "coat",
+    "transcription": "[kəʊt]",
+    "russian": "пальто",
+    "collection": "Одежда"
+  },
+  {
+    "id": "50",
+    "english": "dress",
+    "transcription": "[dres]",
+    "russian": "платье",
+    "collection": "Одежда"
+  },
+  {
+    "id": "51",
+    "english": "blouse",
+    "transcription": "[blaʊz]",
+    "russian": "блузка",
+    "collection": "Одежда"
+  },
+  {
+    "id": "52",
+    "english": "shirt",
+    "transcription": "[ʃɜːt]",
+    "russian": "рубашка",
+    "collection": "Одежда"
+  },
+  {
+    "id": "53",
+    "english": "boots",
+    "transcription": "[buːts]",
+    "russian": "ботинки",
+    "collection": "Одежда"
+  }
+]
