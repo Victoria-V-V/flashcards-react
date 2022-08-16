@@ -1,18 +1,17 @@
-//страничка с коллекциями слов
-
 import React from "react";
-// import WordsJson from "../data/words.json";
-// import Collection from "../components/Collection/Collection";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
     <>
-      <div className="App">Home</div>
-      {/* <div>
-        {WordsJson.map((word) => (
-          <Collection word={word} key={word.id}></Collection>
-        ))}
-      </div> */}
+      <div className="App">
+        <div>
+          <Link to="/WordList">Check WordList</Link>
+        </div>
+        <div>
+          <Link to="/Game">Play Game</Link>
+        </div>
+      </div>
     </>
   );
 };

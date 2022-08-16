@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 
 import {
   AppBar,
@@ -18,7 +18,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Logo from "../../assets/img/logo.png";
 import { Link } from "react-router-dom";
 
-const pages = ["WordList", "Train"];
+const pages = ["WordList", "Game"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const Header = () => {
@@ -126,6 +126,7 @@ const Header = () => {
             ))}
           </Box>
 
+          {/* мб добавить профиль с сохранением результата */}
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
