@@ -7,6 +7,7 @@ export default function EditableRow({
   handleCancelClick,
   handleEditFormChange,
   editFormData,
+  word,
   //FIXME: Это в случае, если мы не используем state editFormData, а передаем дефолтное значение инпута в editablerow через defaultValue!!!
   // english,
   // transcription,
@@ -65,7 +66,7 @@ export default function EditableRow({
           color="warning"
           size="small"
           sx={{ mr: 1 }}
-          onClick={handleCancelClick}
+          onClick={(event) => handleCancelClick(event, word)}
         >
           <DoDisturb />
         </Button>

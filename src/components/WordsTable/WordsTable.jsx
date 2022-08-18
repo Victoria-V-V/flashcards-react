@@ -50,16 +50,13 @@ export default function WordsTable() {
     //TODO: сделать сохранение изменений
   };
 
-  //TODO:TODO: При клике отмена - возврат к исходному состоянию (что-то пошло не так:((
-  const handleCancelClick = () => {
+  const handleCancelClick = (event, word) => {
+    event.preventDefault();
+
     setEditFormData({
-      english: "",
-      transcription: "",
-      russian: "",
-      // english: word.english,
-      // transcription: word.transcription,
-      // russian: word.russian,
-      //Warning: A component is changing a controlled input to be uncontrolled. This is likely caused by the value changing from a defined to undefined, which should not happen. Decide between using a controlled or uncontrolled input element for the lifetime of the component. More info: https://reactjs.org/link/controlled-components
+      english: word.english,
+      transcription: word.transcription,
+      russian: word.russian,
     });
   };
 
@@ -67,17 +64,10 @@ export default function WordsTable() {
   const handleEditFormChange = (event) => {
     event.preventDefault();
 
-    const fieldName = event.target.getAttribute("name");
-    const fieldValue = event.target.value;
-    const newFormData = { ...editFormData };
-    newFormData[fieldName] = fieldValue;
-    setEditFormData(newFormData);
-
-    //или краткая запись 70-74 строк:
-    // setEditFormData({
-    //   ...editFormData,
-    //   [event.target.getAttribute("name")]: event.target.value,
-    // });
+    setEditFormData((prevData) => ({
+      ...prevData,
+      [event.target.getAttribute("name")]: event.target.value,
+    }));
   };
 
   return (
