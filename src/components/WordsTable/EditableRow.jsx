@@ -8,19 +8,14 @@ export default function EditableRow({
   handleEditFormChange,
   editFormData,
   word,
-  //FIXME: Это в случае, если мы не используем state editFormData, а передаем дефолтное значение инпута в editablerow через defaultValue!!!
-  // english,
-  // transcription,
-  // russian,
 }) {
   return (
-    <TableRow>
+    <TableRow key={"editTableRow" + word.id}>
       <TableCell>
         <TextField
           required
           id="standard-basic"
           variant="standard"
-          // FIXME:defaultValue={english}
           name="english"
           onChange={handleEditFormChange}
           value={editFormData.english}
@@ -31,7 +26,6 @@ export default function EditableRow({
           required
           id="standard-basic"
           variant="standard"
-          // FIXME:defaultValue={transcription}
           name="transcription"
           onChange={handleEditFormChange}
           value={editFormData.transcription}
@@ -42,7 +36,6 @@ export default function EditableRow({
           required
           id="standard-basic"
           variant="standard"
-          // FIXME:defaultValue={russian}
           name="russian"
           onChange={handleEditFormChange}
           value={editFormData.russian}

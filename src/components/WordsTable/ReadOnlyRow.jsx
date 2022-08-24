@@ -8,7 +8,7 @@ export default function ReadOnlyRow({
   handleDeleteClick,
 }) {
   return (
-    <TableRow key={word.id}>
+    <TableRow key={"readTableRow" + word.id}>
       <TableCell component="th" scope="row">
         {word.english}
       </TableCell>
