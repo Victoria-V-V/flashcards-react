@@ -1,11 +1,11 @@
 import React from "react";
-import Card from "../components/WordCard/WordCard";
+import WordCardContainer from "../components/WordCard/WordCardContainer";
 
 const Game = () => {
   return (
     <>
       <div className="Game">
-        <Card></Card>
+        <WordCardContainer></WordCardContainer>
       </div>
     </>
   );

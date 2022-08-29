@@ -19,7 +19,7 @@ import {
 export default function WordsTable() {
   const [editWordId, setEditWordId] = useState(null);
 
-  //Состояние (будем хранить в объекте), в котором хранятся данные формы, которые можно будет изменять (также можно use defaultValue - описано в FIXME:):
+  //Состояние (будем хранить в объекте), в котором хранятся данные формы, которые можно будет изменять:
   const [editFormData, setEditFormData] = useState({
     english: "",
     transcription: "",
@@ -91,19 +91,16 @@ export default function WordsTable() {
                   {editWordId === word.id ? (
                     <EditableRow
                       word={word}
+                      key={"editRow" + word.id}
                       handleSaveClick={handleSaveClick}
                       handleCancelClick={handleCancelClick}
                       handleEditFormChange={handleEditFormChange}
                       editFormData={editFormData}
-                      //FIXME: Это в случае, если мы не используем state editFormData, а передаем дефолтное значение инпута в editablerow через defaultValue!!!
-                      // english={word.english}
-                      // transcription={word.transcription}
-                      // russian={word.russian}
                     />
                   ) : (
                     <ReadOnlyRow
                       word={word}
-                      // key={word.id}
+                      key={"readRow" + word.id}
                       handleEditClick={handleEditClick}
                       handleDeleteClick={handleDeleteClick}
                     />

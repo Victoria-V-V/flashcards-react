@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-// import styled from "styled-components";
+import React, { useState, useEffect } from "react";
+
 import {
   Card,
   Button,
@@ -8,26 +8,21 @@ import {
   Container,
 } from "@mui/material";
 
-// const Title = styled.h1`
-//   font-size: 1.5em;
-//   text-align: center;
-//   color: palevioletred;
-// `;
-
-export default function WordCard() {
+export default function WordCard(word) {
   const [translated, setTranslated] = useState(false);
 
   const handleTranslateClick = () => {
     setTranslated((prevState) => !prevState);
   };
 
+  //закроем перевод при перелистывании карточки
+  useEffect(() => {
+    setTranslated(false);
+  }, [word]);
+
   return (
     <>
-      {/* <Title>Test</Title> */}
-      <Container
-        maxWidth="md"
-        sx={{ pt: 10, display: "flex", justifyContent: "center" }}
-      >
+      <Container sx={{ p: 0 }}>
         <Card
           sx={{
             minWidth: 250,
@@ -51,10 +46,10 @@ export default function WordCard() {
                 pt: 3,
               }}
             >
-              vegetables
+              {word.english}
             </Typography>
             <Typography sx={{ mb: 1.5, pt: 1 }} color="text.secondary">
-              ['veʤ(ə)təblz]
+              {word.transcription}
             </Typography>
             <Container
               sx={{
@@ -63,7 +58,7 @@ export default function WordCard() {
             >
               {translated ? (
                 <Typography variant="h5" color="primary">
-                  овощи
+                  {word.russian}
                 </Typography>
               ) : (
                 <Button
