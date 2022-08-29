@@ -7,9 +7,8 @@ import { Container, Button } from "@mui/material";
 import WordsJson from "../../data/words.json";
 
 const WordCardContainer = () => {
-  const words = WordsJson;
-
-  //Родительскому компоненту для карточек слов нужно добавить состояние, в котором будет храниться индекс карточки:
+  // const [words, setWords] = useState(WordsJson); //пока просто переменная с данными в состоянии:
+  const [words] = useState(WordsJson);
   const [indexCard, setIndexCard] = useState(0);
   const [currentIndex, setCurrentIndex] = useState(null);
 
@@ -26,11 +25,14 @@ const WordCardContainer = () => {
       case "left":
         --newIndex;
         break;
+
+      //TODO: вынести в колбэк для setIndexCard, чтобы текущий индекс всегда был актуальный...
       default:
         ++newIndex;
     }
     setIndexCard(newIndex);
 
+    //TODO:  ...И код ниже вынести в эффект
     if (newIndex !== 0) {
       setCurrentIndex(true);
     } else setCurrentIndex(false);
