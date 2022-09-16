@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 import {
   Card,
@@ -8,17 +8,27 @@ import {
   Container,
 } from "@mui/material";
 
-export default function WordCard(word) {
+const WordCard = ({ word, english, transcription, russian, id, onClick }) => {
   const [translated, setTranslated] = useState(false);
 
   const handleTranslateClick = () => {
     setTranslated((prevState) => !prevState);
+    //через колбэк будем передавать в родителя информацию о слове, которое было изучено:
+    onClick(id);
   };
+
+  //фокус
+  const ref = useRef();
+  useEffect(() => {
+    setTimeout(() => {
+      ref.current.focus();
+    }, 0);
+  }, [english]);
 
   //закроем перевод при перелистывании карточки
   useEffect(() => {
     setTranslated(false);
-  }, [word]);
+  }, [transcription]);
 
   return (
     <>
@@ -46,10 +56,10 @@ export default function WordCard(word) {
                 pt: 3,
               }}
             >
-              {word.english}
+              {english}
             </Typography>
             <Typography sx={{ mb: 1.5, pt: 1 }} color="text.secondary">
-              {word.transcription}
+              {transcription}
             </Typography>
             <Container
               sx={{
@@ -58,10 +68,11 @@ export default function WordCard(word) {
             >
               {translated ? (
                 <Typography variant="h5" color="primary">
-                  {word.russian}
+                  {russian}
                 </Typography>
               ) : (
                 <Button
+                  className="translateButton"
                   variant="contained"
                   color="primary"
                   size="small"
@@ -69,6 +80,7 @@ export default function WordCard(word) {
                     borderRadius: 3,
                   }}
                   onClick={handleTranslateClick}
+                  ref={ref}
                 >
                   Проверить
                 </Button>
@@ -79,4 +91,6 @@ export default function WordCard(word) {
       </Container>
     </>
   );
-}
+};
+
+export default WordCard;

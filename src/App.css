@@ -1,3 +1,7 @@
 .App {
   text-align: center;
 }
+
+.translateButton:focus {
+  outline: 4px solid lightgray;
+}
