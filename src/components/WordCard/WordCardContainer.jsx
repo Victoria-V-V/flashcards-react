@@ -11,8 +11,31 @@ const WordCardContainer = () => {
   const [words] = useState(WordsJson);
   const [indexCard, setIndexCard] = useState(0);
   const [currentIndex, setCurrentIndex] = useState(null);
+  const [learnedWords, setlearnedWords] = useState([]);
+
+  const handleClickWord = (id) => {
+    setlearnedWords((prevState) =>
+      prevState.includes(id) ? [...prevState] : [...prevState, id]
+    );
+  };
 
   const switchCards = (direction) => {
+    // setIndexCard((newIndex) => {
+    //   switch (direction) {
+    //     case "right":
+    //       ++newIndex;
+    //       if (newIndex === words.length) {
+    //         newIndex = 0;
+    //       }
+    //       break;
+    //     case "left":
+    //       --newIndex;
+    //       break;
+    //     default:
+    //       ++newIndex;
+    //   }
+    // });
+
     let newIndex = indexCard;
 
     switch (direction) {
@@ -26,7 +49,7 @@ const WordCardContainer = () => {
         --newIndex;
         break;
 
-      //TODO: вынести в колбэк для setIndexCard, чтобы текущий индекс всегда был актуальный...
+      //TODO: вынести switch в колбэк для setIndexCard, чтобы текущий индекс всегда был актуальный...
       default:
         ++newIndex;
     }
@@ -58,7 +81,14 @@ const WordCardContainer = () => {
             <KeyboardDoubleArrowLeftIcon fontSize="large" color="inherit" />
           </Button>
         ) : (
-          ""
+          //FIXME:пока так, чтобы карточка не уезжала, переделать стили:
+          <div
+            style={{
+              marginLeft: 60,
+            }}
+          >
+            &nbsp;
+          </div>
         )}
 
         <Card
@@ -66,11 +96,20 @@ const WordCardContainer = () => {
           english={words[indexCard].english}
           transcription={words[indexCard].transcription}
           russian={words[indexCard].russian}
+          id={words[indexCard].id}
+          onClick={handleClickWord}
         ></Card>
 
         <Button color="primary" onClick={() => switchCards("right")}>
           <KeyboardDoubleArrowRightIcon fontSize="large" color="primary" />
         </Button>
+      </Container>
+      <Container
+        sx={{
+          mt: 5,
+        }}
+      >
+        Вы выучили слов {learnedWords.length} из {words.length}
       </Container>
     </>
   );
