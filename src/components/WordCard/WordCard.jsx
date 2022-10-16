@@ -19,11 +19,25 @@ const WordCard = ({ word, english, transcription, russian, id, onClick }) => {
 
   //фокус
   const ref = useRef();
+
+  const setRef = (element) => {
+    if (element) {
+      ref.current = element;
+    }
+  };
+
   useEffect(() => {
-    setTimeout(() => {
+    if (ref.current) {
       ref.current.focus();
-    }, 0);
+    }
   }, [english]);
+
+  // ИЛИ можно указать [setRef]:
+  // useEffect(() => {
+  //   if (ref.current) {
+  //     ref.current.focus();
+  //   }
+  // }, [setRef]);
 
   //закроем перевод при перелистывании карточки
   useEffect(() => {
@@ -80,7 +94,7 @@ const WordCard = ({ word, english, transcription, russian, id, onClick }) => {
                     borderRadius: 3,
                   }}
                   onClick={handleTranslateClick}
-                  ref={ref}
+                  ref={setRef}
                 >
                   Проверить
                 </Button>

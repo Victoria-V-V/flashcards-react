@@ -14,16 +14,28 @@ const WordCardContainer = () => {
   const [learnedWords, setlearnedWords] = useState([]);
 
   const handleClickWord = (id) => {
-    let newLearned;
-    if (learnedWords.includes(id)) {
-      newLearned = [...learnedWords];
-    } else {
-      newLearned = [...learnedWords, id];
-    }
-    setlearnedWords(newLearned);
+    setlearnedWords((prevState) =>
+      prevState.includes(id) ? [...prevState] : [...prevState, id]
+    );
   };
 
   const switchCards = (direction) => {
+    // setIndexCard((newIndex) => {
+    //   switch (direction) {
+    //     case "right":
+    //       ++newIndex;
+    //       if (newIndex === words.length) {
+    //         newIndex = 0;
+    //       }
+    //       break;
+    //     case "left":
+    //       --newIndex;
+    //       break;
+    //     default:
+    //       ++newIndex;
+    //   }
+    // });
+
     let newIndex = indexCard;
 
     switch (direction) {
